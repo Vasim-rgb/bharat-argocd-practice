@@ -13,8 +13,6 @@ COPY . /app/
 # Expose the port that Flask will run on
 EXPOSE 5050
 
-# Set the environment variable to tell Flask to run in production mode
-# ENV FLASK_ENV=production
-
 # Set the command to run the Flask app
-CMD ["python", "app/app.py", "--host=0.0.0.0", "--port=5050"]
+# CMD ["python", "app/app.py", "--host=0.0.0.0", "--port=5050"]
+CMD ["python", "app/app.py"]

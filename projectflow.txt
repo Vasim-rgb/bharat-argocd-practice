@@ -10,3 +10,11 @@
    { argocd admin initial-password -n argocd }
 5. Now we have to configure argocd. In the dev/application.yaml file. to configure that run cmd.
    { kubectl apply -f application.yaml }
+
+-------------------------------------------------------------------------------------------------
+1. Create repo, clone it in local
+2. Create a virtual environment named 'argo' - conda create -n argo python=3.10
+3. Activate the virtual environment - conda activate argo
+4. copy the provided requirements.txt file and do "pip install -r requirements.txt"
+5. Clone the project and run locally
+6. CICD
