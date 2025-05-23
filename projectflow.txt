@@ -17,4 +17,15 @@
 3. Activate the virtual environment - conda activate argo
 4. copy the provided requirements.txt file and do "pip install -r requirements.txt"
 5. Clone the project and run locally
-6. CICD
+6. CICD -> set below secret & var on githubactions:
+   DOCKER_USERNAME
+   DOCKER_PASSWORD
+7. 
+
+
+
+docker build -t my-bharat-image .
+docker run -p 5050:5050 my-bharat-image
+
+docker ps
+docker logs a0f3be6f40eaf92de5702a07e7e94f345c74ece9dee69b27b6fae9512816bffd
