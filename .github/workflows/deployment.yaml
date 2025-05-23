@@ -28,7 +28,7 @@ jobs:
         username: ${{ secrets.DOCKER_USERNAME }}
         password: ${{ secrets.DOCKER_PASSWORD }}
 
-    - name: Build and push Docker image
+    - name: Build and push Docker image (multi-arch)
       uses: docker/build-push-action@v5
       with:
         context: .
@@ -36,6 +36,7 @@ jobs:
         platforms: linux/amd64,linux/arm64
         tags: |
           ${{ env.IMAGE_NAME }}:latest
+          ${{ env.IMAGE_NAME }}:${{ env.VERSION }}
 
     - name: Deployment successful
       run: |
