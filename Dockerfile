@@ -14,5 +14,5 @@ COPY . /app/
 EXPOSE 5050
 
 # Set the command to run the Flask app
-# CMD ["python", "app/app.py", "--host=0.0.0.0", "--port=5050"]
-CMD ["python", "app/app.py"]
+CMD ["python", "app/app.py", "--host=0.0.0.0", "--port=5050"]
+# CMD ["python", "app/app.py"]
