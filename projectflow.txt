@@ -7,7 +7,8 @@
    we have to port forwarding to access it using the below command.
    { kubectl port-forward -n argocd svc/argocd-server 9090:443} it expose web ui to port 9090.
 4. now to login argocd the username is admin and the password is auto generated to grab pass.
-   { argocd admin initial-password -n argocd }
+   [ "$encoded = kubectl get secret argocd-initial-admin-secret -n argocd -o jsonpath="{.data.password}"
+[System.Text.Encoding]::UTF8.GetString([System.Convert]::FromBase64String($encoded))" ]
 5. Now we have to configure argocd. In the dev/application.yaml file. to configure that run cmd.
    { kubectl apply -f application.yaml }
 
@@ -20,7 +21,9 @@
 6. CICD -> set below secret & var on githubactions:
    DOCKER_USERNAME
    DOCKER_PASSWORD
-7. 
+7. Set the cicd pipeline and run (verify if image was pushed successfully)
+8. Create a minikube cluster (minikube start)
+9. 
 
 
 
@@ -29,3 +32,5 @@ docker run -p 5050:5050 my-bharat-image
 
 docker ps
 docker logs a0f3be6f40eaf92de5702a07e7e94f345c74ece9dee69b27b6fae9512816bffd
+
+docker run -p 5050:5050 vikash95/flask-app
