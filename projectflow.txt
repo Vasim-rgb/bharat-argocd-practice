@@ -23,7 +23,7 @@
    DOCKER_PASSWORD
 7. Set the cicd pipeline and run (verify if image was pushed successfully)
 8. Create a minikube cluster (minikube start)
-9. DONE till here
+9. DONE till here  good
 
 
 
