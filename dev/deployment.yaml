@@ -14,6 +14,6 @@ spec:
     spec:
       containers:
       - name: myapp
-        image: vikash95/flask-app:latest
+        image: Vasim-rgb/flask-app:latest
         ports:
         - containerPort: 5050
